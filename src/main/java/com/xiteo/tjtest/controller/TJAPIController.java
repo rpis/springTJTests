@@ -16,6 +16,7 @@ public class TJAPIController {
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseBody
 	public ModelOut testApi(@RequestBody ModelIn modelIn) {
+		System.out.println("Conroler!");
 		return ModelOut.builder().from(modelIn.getFrom()).to(modelIn.getTo()).build();
 	}
 }
